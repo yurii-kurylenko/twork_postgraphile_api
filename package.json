@@ -1,0 +1,20 @@
+{
+  "name": "twork_postgraphile_api",
+  "version": "0.0.1",
+  "description": "Twork time tracker api example with postgraphile",
+  "main": "index.js",
+  "repository": "git@github.com:yurii-kurylenko/twork_postgraphile_api.git",
+  "author": "Yurii Kurylenko <yuriy.kurilenko7@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "db:create": "./node_modules/.bin/sequelize db:create",
+    "db:migrate": "./node_modules/.bin/sequelize db:migrate",
+    "start": "./node_modules/.bin/postgraphile --connection postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}/${POSTGRES_DB} -n 0.0.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "postgraphile": "^4.3.3",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  }
+}
